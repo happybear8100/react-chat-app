@@ -16,8 +16,8 @@ function Join() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-100">
-      <div className="grid place-items-center my-auto">
+    <div className="flex flex-col justify-center h-screen bg-gray-100">
+      <div className="grid place-items-center">
         <h1 className="font-bold text-4xl pb-10 text-gray-900 antialiased">
           Chat App 🦜
         </h1>
