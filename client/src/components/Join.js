@@ -41,6 +41,7 @@ function Join() {
             Join
           </button>
         </form>
+        <p className="mt-5">Please enter your nickname to join a chat</p>
       </div>
     </div>
   );
