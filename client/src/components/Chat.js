@@ -125,7 +125,7 @@ function Chat() {
                   <button
                     key={index}
                     onClick={() => saveUserToPrivateMsg(el)}
-                    className="block focus:outline-none truncate"
+                    className="w-full block focus:outline-none truncate"
                   >
                     <UserOnline nickname={el} />
                   </button>
