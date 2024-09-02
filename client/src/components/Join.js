@@ -16,32 +16,38 @@ function Join() {
   };
 
   return (
-    <div className="flex flex-col justify-center h-screen bg-gray-100">
-      <div className="grid place-items-center">
-        <h1 className="font-bold text-4xl pb-10 text-gray-900 antialiased">
-          Chat App 🦜
-        </h1>
-        <form className="flex w-full max-w-sm space-x-3 justify-center">
-          <div className="relative ">
-            <input
-              type="text"
-              onChange={(e) => setNickname(e.target.value)}
-              className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-transparent"
-              placeholder="Nickname"
-            />
-          </div>
-          <button
-            className="flex-shrink-0 bg-green-400 text-gray-800 text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
-            onClick={() => {
-              submitNickname();
-              handleOnClick();
-            }}
-            type="submit"
-          >
-            Join
-          </button>
-        </form>
-        <p className="mt-5">Please enter your nickname to join a chat</p>
+    <div className="relative">
+      <h1 className="absolute top-10 left-10 font-bold text-5xl text-gray-900">Chat App 🦜 </h1>
+      <div className="flex flex-col justify-center h-screen bg-gray-100">
+        <div className="grid place-items-center">
+          <form className="flex w-full max-w-sm justify-center">
+            <div className="relative">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                Username
+              </label>
+              <div className="flex space-x-5">
+                <input
+                  type="text"
+                  onChange={(e) => setNickname(e.target.value)}
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="username"
+                  placeholder="Username"
+                />
+                <button
+                  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+                  onClick={() => {
+                    submitNickname();
+                    handleOnClick();
+                  }}
+                  type="submit"
+                >
+                  Join
+                </button>
+              </div>
+            </div>
+          </form>
+          <p className="mt-5 text-gray-500">Please enter your nickname to join a chat</p>
+        </div>
       </div>
     </div>
   );
