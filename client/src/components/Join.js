@@ -12,6 +12,9 @@ function Join() {
   }, []);
 
   const submitNickname = () => {
+    if(nickname) {
+      console.log(nickname);
+    }
     socket.emit("user nickname", nickname);
   };
 
@@ -22,7 +25,7 @@ function Join() {
         <div className="grid place-items-center">
           <form className="flex w-full max-w-sm justify-center">
             <div className="relative">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                 Username
               </label>
               <div className="flex space-x-5">
